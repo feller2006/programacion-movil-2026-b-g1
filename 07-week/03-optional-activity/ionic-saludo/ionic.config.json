@@ -1,0 +1,7 @@
+{
+  "name": "ionic-saludo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
