@@ -1,9 +1,35 @@
-/* Tema mínimo: verde institucional como color primario */
+
 :root {
-  --ion-color-primary: #009540;
-  --ion-color-primary-rgb: 0, 149, 64;
+  /* Main colors */
+  --ion-color-primary: #006b35;
+  --ion-color-primary-rgb: 0, 107, 53;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #008338;
-  --ion-color-primary-tint: #1aa053;
+  --ion-color-primary-shade: #005e2f;
+  --ion-color-primary-tint: #1a7a49;
+
+  /* Secondary and status colors */
+  --ion-color-secondary: #164e63;
+  --ion-color-secondary-rgb: 22, 78, 99;
+  --ion-color-secondary-contrast: #ffffff;
+
+  --ion-color-success: #006b35;
+  --ion-color-danger: #b42318;
+
+  /* Background and text */
+  --ion-background-color: #ffffff;
+  --ion-text-color: #1f2937;
+
+  /* Typography */
+  --app-font-small: 0.875rem;
+  --app-font-base: 1rem;
+  --app-font-title: 1.5rem;
+
+  /* Spacing */
+  --app-space-sm: 0.5rem;
+  --app-space-md: 1rem;
+  --app-space-lg: 1.5rem;
+
+  /* Border radius */
+  --app-radius: 0.75rem;
 }
