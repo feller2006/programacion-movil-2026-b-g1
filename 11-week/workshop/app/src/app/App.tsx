@@ -5,6 +5,7 @@ import { Redirect, Route } from 'react-router-dom';
 
 import ClassListPage from '../features/classes/presentation/ClassListPage';
 import ClassDetailPage from '../features/classes/presentation/ClassDetailPage';
+import ClassSessionFormPage from '../features/classes/presentation/ClassSessionFormPage';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -21,6 +22,11 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/classes" component={ClassListPage} />
+        <Route
+          exact
+          path="/classes/new"
+          component={ClassSessionFormPage}
+        />
         <Route
           exact
           path="/class-session/:sessionId"
