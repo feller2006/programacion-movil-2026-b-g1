@@ -93,6 +93,10 @@ const ClassListPage: React.FC = () => {
         <h2>Course A</h2>
         <p>Scheduled class sessions</p>
 
+        <IonButton expand="block" routerLink="/classes/new">
+  Create Session
+</IonButton>
+
         {status === 'loading' && (
           <IonList aria-label="Loading class sessions">
             {[1, 2, 3].map((item) => (
