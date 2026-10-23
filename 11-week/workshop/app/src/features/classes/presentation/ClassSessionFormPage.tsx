@@ -7,6 +7,7 @@ import {
   IonButtons,
   IonContent,
   IonHeader,
+  IonNote,
   IonPage,
   IonSpinner,
   IonTitle,
@@ -59,13 +60,15 @@ const ClassSessionFormPage: React.FC = () => {
       ).get('scenario');
 
       if (scenario === 'error') {
-        throw new Error('The session could not be saved. Please try again.');
+        throw new Error('The session could not be validated. Please try again.');
       }
 
       setShowToast(true);
     } catch (error) {
       setServerError(
-        error instanceof Error ? error.message : 'An unexpected error occurred.',
+        error instanceof Error
+          ? error.message
+          : 'An unexpected error occurred.',
       );
     } finally {
       setSubmitting(false);
@@ -86,12 +89,18 @@ const ClassSessionFormPage: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/classes" />
           </IonButtons>
-          <IonTitle>Create Class Session</IonTitle>
+          <IonTitle>Create Class Session — Demo</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent className="ion-padding">
         <h2>New Session</h2>
-        <p>Complete the fields to create a class session.</p>
+        <p>Complete the fields to validate a class session.</p>
+
+        <IonNote color="warning">
+          Demo mode: this form does not save sessions.
+          New sessions will not appear in the class list.
+        </IonNote>
 
         <ClassSessionFields
           values={values}
@@ -108,7 +117,11 @@ const ClassSessionFormPage: React.FC = () => {
           disabled={!isValid || submitting}
           onClick={() => void handleSubmit()}
         >
-          {submitting ? <IonSpinner name="crescent" /> : 'Create Session'}
+          {submitting ? (
+            <IonSpinner name="crescent" />
+          ) : (
+            'Validate Session'
+          )}
         </IonButton>
 
         <IonButton
@@ -126,15 +139,19 @@ const ClassSessionFormPage: React.FC = () => {
           message="Your unsaved session information will be lost."
           buttons={[
             { text: 'Keep editing', role: 'cancel' },
-            { text: 'Discard', role: 'destructive', handler: discardChanges },
+            {
+              text: 'Discard',
+              role: 'destructive',
+              handler: discardChanges,
+            },
           ]}
           onDidDismiss={() => setShowAlert(false)}
         />
 
         <IonToast
           isOpen={showToast}
-          message="Session validated successfully (demo only)"
-          duration={2500}
+          message="Form validated. No session was saved."
+          duration={3500}
           onDidDismiss={() => setShowToast(false)}
         />
       </IonContent>

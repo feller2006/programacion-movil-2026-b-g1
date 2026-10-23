@@ -58,3 +58,22 @@ Update the form to clearly indicate that submission is simulated and no session 
 ## Limitations
 
 The application currently uses simulated data and does not persist newly created sessions.
+
+## Implemented correction
+
+Both participants expected a newly submitted class session to appear in the class list.
+
+The form feedback was updated to clarify that the application is running in demo mode.
+
+Changes implemented:
+- Added a visible demo-mode notice.
+- Renamed the submit button to "Validate Session".
+- Updated the success toast to "Form validated. No session was saved."
+
+This improves the accuracy of user feedback but does not implement real data persistence.
+
+## Follow-up verification
+
+Build completed successfully.
+
+Manual verification of the updated messages is pending.
