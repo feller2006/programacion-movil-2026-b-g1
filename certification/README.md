@@ -1,4 +1,4 @@
-﻿# Certificación Corte 3 - Programación Móvil
+﻿# Evidencias de certificación - Huawei Cangjie Programming
 
 ## Datos del estudiante
 
@@ -67,4 +67,5 @@ Se aprobó el examen final de Cangjie Programming con una calificación de 90 pu
 La siguiente captura muestra un avance del 99 % y los tres proyectos marcados como completados.
 
 ![Progreso del curso](./evidencias/04-progreso-curso-99-porciento.png)
+
 
